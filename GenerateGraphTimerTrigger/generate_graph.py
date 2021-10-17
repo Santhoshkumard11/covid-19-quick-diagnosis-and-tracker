@@ -43,12 +43,13 @@ class GenerateGraph:
     def generate_graphs(self):
         
         vaccine_status_fig = self.vaccine_status_df.plot.pie(y="vaccination_status", figsize=(5, 5),
-                                          legend="vaccination_status", title="Vaccination Status",
+                                          legend="vaccination_status", title="By Vaccination Status",
                                           autopct=lambda p: '{:.0f}'.format(
                                               (p/100)*self.vaccine_status_df.sum()),
                                           cmap="spring")
 
-
+        self.vaccine_status_image_object = vaccine_status_fig.get_figure()
+        
         vaccine_name_fig = self.vaccine_name_df.plot.pie(y="vaccine_name", figsize=(5, 5),
                                     legend="vaccine_name", title="By Vaccine Name",
                                     autopct=lambda p: '{:.0f}'.format(
@@ -56,15 +57,13 @@ class GenerateGraph:
                                     cmap="winter")
 
         self.vaccine_name_image_object = vaccine_name_fig.get_figure()
-        self.vaccine_status_image_object = vaccine_status_fig.get_figure()
 
 
     def save_image_to_blob_storage(self, blob_client, image_object):
         buf = io.BytesIO()
         image_object.savefig(buf, format='png')
         byte_im = buf.getvalue()        
-        blob_client.upload_blob(byte_im, overwrite=True, blob_type="BlockBlob")    
-        buf.flush()
+        blob_client.upload_blob(byte_im, overwrite=True, blob_type="BlockBlob")
 
     def start_process(self):
         logging.info("Starting generate graph process")
