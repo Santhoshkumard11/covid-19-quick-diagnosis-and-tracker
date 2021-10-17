@@ -1,0 +1,7 @@
+.git*
+.vscode
+local.settings.json
+test
+.venv
+temp_powerapps_formula.txt
+temp_notebook.ipynb
