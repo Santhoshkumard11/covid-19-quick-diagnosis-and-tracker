@@ -10,9 +10,9 @@ class GenerateGraph:
         self.cosmos_db_client_obj = cosmos_db_client_obj
 
         self.blob_client_obj_vaccine_status = BlobStorageClient(
-            "covid-19-trend-graph", "vaccine_status_graph")
+            "covid-19-trend-graph", "vaccine_status_graph.png")
         self.blob_client_obj_vaccine_name = BlobStorageClient(
-            "covid-19-trend-graph", "vaccine_name_graph")
+            "covid-19-trend-graph", "vaccine_name_graph.png")
         
         self.vaccine_status_df, self.vaccine_name_df = None, None
         
@@ -61,7 +61,7 @@ class GenerateGraph:
 
     def save_image_to_blob_storage(self, blob_client, image_object):
         buf = io.BytesIO()
-        image_object.save(buf, format='png')
+        image_object.savefig(buf, format='png')
         byte_im = buf.getvalue()        
         blob_client.upload_blob(byte_im, overwrite=True, blob_type="BlockBlob")    
         buf.flush()
