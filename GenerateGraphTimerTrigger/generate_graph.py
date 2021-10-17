@@ -29,14 +29,14 @@ class GenerateGraph:
             vaccine_name_list.append(item["vaccine_name"])
             vaccine_status_list.append(item["is_vaccinated_status"])
         
-        df = pd.DataFrame({"s.no": list(range(1, len(vaccine_name_list))), 
+        df = pd.DataFrame({"s.no": list(range(1, len(vaccine_name_list)+1)), 
                            'vaccine_name': vaccine_name_list,
                            'vaccination_status': vaccine_status_list},
                             columns = ["s.no", 'vaccine_name', 'vaccination_status'])
         
         self.vaccine_status_df = df.groupby(
-            {"vaccination_status"})["s.no"].count()
-        self.vaccine_name_df = df.groupby({"vaccine_name"})["s.no"].count()
+            "vaccination_status")["s.no"].count()
+        self.vaccine_name_df = df.groupby("vaccine_name")["s.no"].count()
         
         logging.info("Gathered the data and created the dataframe")
 
