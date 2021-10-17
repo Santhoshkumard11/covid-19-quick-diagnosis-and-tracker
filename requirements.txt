@@ -17,5 +17,5 @@ tomli==1.2.1
 typing-extensions==3.10.0.2
 urllib3==1.26.7
 azure-storage-blob==12.6.0
-wordcloud
 matplotlib
+pandas
