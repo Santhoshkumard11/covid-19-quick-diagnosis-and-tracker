@@ -1,5 +1,5 @@
 import pandas as pd
-from blob_storage_client import BlobStorageClient
+from .blob_storage_client import BlobStorageClient
 import logging
 import io
 

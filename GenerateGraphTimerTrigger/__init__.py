@@ -1,7 +1,7 @@
 import datetime
 import logging
 from cosmos_db_client import CosmosDBClient
-from generate_graph import GenerateGraph
+from .generate_graph import GenerateGraph
 
 import azure.functions as func
 
