@@ -42,14 +42,14 @@ class GenerateGraph:
 
     def generate_graphs(self):
         
-        vaccine_name_fig = self.vaccine_status_df.plot.pie(y="vaccine_name", figsize=(5, 5),
+        vaccine_status_fig = self.vaccine_status_df.plot.pie(y="vaccination_status", figsize=(5, 5),
                                           legend="vaccination_status", title="Vaccination Status",
                                           autopct=lambda p: '{:.0f}'.format(
                                               (p/100)*self.vaccine_status_df.sum()),
                                           cmap="spring")
 
 
-        vaccine_status_fig = self.vaccine_name_df.plot.pie(y="vaccine_name", figsize=(5, 5),
+        vaccine_name_fig = self.vaccine_name_df.plot.pie(y="vaccine_name", figsize=(5, 5),
                                     legend="vaccine_name", title="By Vaccine Name",
                                     autopct=lambda p: '{:.0f}'.format(
                                         (p/100)*self.vaccine_name_df.sum()),
