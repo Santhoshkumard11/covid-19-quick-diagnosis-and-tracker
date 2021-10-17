@@ -1,0 +1,12 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "save_to_db_queue",
+      "connection": "covid19quickdiagnosis_SERVICEBUS"
+    }
+  ]
+}
