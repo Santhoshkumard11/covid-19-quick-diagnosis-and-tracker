@@ -49,7 +49,7 @@ class GenerateGraph:
                                           cmap="spring")
 
         self.vaccine_status_image_object = vaccine_status_fig.get_figure()
-        
+
         vaccine_name_fig = self.vaccine_name_df.plot.pie(y="vaccine_name", figsize=(5, 5),
                                     legend="vaccine_name", title="By Vaccine Name",
                                     autopct=lambda p: '{:.0f}'.format(
@@ -64,7 +64,9 @@ class GenerateGraph:
         image_object.savefig(buf, format='png')
         byte_im = buf.getvalue()        
         blob_client.upload_blob(byte_im, overwrite=True, blob_type="BlockBlob")
-
+        buf.flush()
+        buf.close()
+        
     def start_process(self):
         logging.info("Starting generate graph process")
         
