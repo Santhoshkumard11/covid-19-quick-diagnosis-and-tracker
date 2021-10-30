@@ -32,6 +32,7 @@ class GenerateGraph:
             vaccine_name_list.append(item["vaccine_name"])
             vaccine_status_list.append(item["is_vaccinated_status"])
 
+
         # create a new dataframe with the items from cosmos db
         df = pd.DataFrame(
             {"s.no": list(range(1, len(vaccine_name_list) + 1)),
@@ -94,7 +95,9 @@ class GenerateGraph:
     def save_image_to_blob_storage(self, blob_client, image_object):
         buf = io.BytesIO()
         image_object.savefig(buf, format='png')
+
         byte_im = buf.getvalue()
+
         blob_client.upload_blob(
             byte_im, overwrite=True, blob_type="BlockBlob")
         buf.flush()
@@ -106,6 +109,7 @@ class GenerateGraph:
         self.query_all_item_from_cosmos_db()
 
         self.prepare_df()
+
         # TODO: abstract both the graph generation methods
         self.generate_graph_vaccine_status()
         self.generate_graph_vaccination_name()
