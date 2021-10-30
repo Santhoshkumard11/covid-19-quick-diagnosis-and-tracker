@@ -6,10 +6,11 @@ The graphs are generated periodically and updated with new data points gathered 
 #### Coming Soon!!
 ## Architecture and Flow Diagram
 
-![architecture diagram](/images/architecture-diagram.png)
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/architecture-diagram-2.png" height="400" width="1000" alt="Content">
 
 ## Content
-![architecture diagram](/images/details.png)
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/details.png" height="580" alt="Content">
+
 
 ## Services Used
 - __Power Apps__
