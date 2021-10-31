@@ -1,4 +1,4 @@
-# Covid-19 Quick Diagnosis and Tracker
+# COVID-19 Quick Diagnosis and Tracker
 This Power App has the ability to track new patients and their details and provide different graphs to better understand the spread and vaccination status of citizens.
 The graphs are generated periodically and updated with new data points gathered from power apps.
 
@@ -6,7 +6,7 @@ The graphs are generated periodically and updated with new data points gathered 
 #### Coming Soon!!
 ## Architecture and Flow Diagram
 
-<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/architecture-diagram-2.png" height="400" width="1000" alt="Content">
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/architecture-diagram.png" height="440" width="1400" alt="architecture diagram">
 
 ## Content
 <img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/details.png" height="580" alt="Content">
