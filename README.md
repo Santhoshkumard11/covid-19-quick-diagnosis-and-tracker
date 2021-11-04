@@ -27,3 +27,4 @@ The graphs are generated periodically and updated with new data points gathered 
 
 ## TODO
 - Train and Deploy a ML model which can give a quick diagnosis by asking questions to the user
+- Upload the complete Power App (should be tested after pushing it through)
