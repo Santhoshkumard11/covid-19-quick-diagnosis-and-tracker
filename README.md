@@ -11,10 +11,16 @@ The graphs are generated periodically and updated with new data points gathered 
 
 ## Architecture and Flow Diagram
 
-<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/architecture-diagram.png" height="440" width="1000" alt="architecture diagram">
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/main/images/architecture-diagram.png" height="440" width="1000" alt="architecture diagram">
 
 ## Power Apps Content
-<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/master/images/details.png" height="580" alt="Content">
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/main/images/details.png" height="580" alt="Content">
+
+
+
+## Sample Graphs
+### Distribution of people with type of vaccine
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/main/images/sample_graph.jpeg" alt="graph">
 
 
 ## Services Used
