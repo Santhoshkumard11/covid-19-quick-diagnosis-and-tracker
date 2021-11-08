@@ -20,7 +20,7 @@ The graphs are generated periodically and updated with new data points gathered 
 
 ## Sample Graphs
 ### Distribution of people with type of vaccine
-<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/main/images/sample_graph.jpeg" alt="graph">
+<img src="https://github.com/Santhoshkumard11/covid-19-quick-diagnosis-and-tracker/blob/main/images/sample_graph.jpeg" height="400"  height="400" alt="graph">
 
 
 ## Services Used
